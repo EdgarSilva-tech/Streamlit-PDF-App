@@ -27,7 +27,7 @@ if pdf is not None:
 
         st.write("Full path of the uploaded file:", temp_file_path)
 
-query_input = st.text_area(f"What do you want to know about {pdf.name}?", disabled=not Open_AI_key and not pdf)
+query_input = st.text_area(f"What do you want to know about?", disabled=not Open_AI_key and not pdf)
 submitted = st.button('Submit')
 
 with st.spinner("Thinking about it..."):
