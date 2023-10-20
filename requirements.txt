@@ -1,6 +1,5 @@
 langchain
 streamlit
-PyPDF2
 chromadb
 pypdf
-
+python-dotenv

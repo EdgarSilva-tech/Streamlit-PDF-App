@@ -3,6 +3,9 @@ import os
 import tempfile
 from model import Retrieval_QA
 
+from dotenv import load_dotenv
+load_dotenv()
+
 st.set_page_config(page_title='🦜🔗 Quick GPT')
 st.title("Quick GPT 📖📚🏫📝")
 st.sidebar.title("API Key")
