@@ -15,7 +15,10 @@ st.sidebar.markdown("2 - Insert a pdf file")
 st.sidebar.markdown("3 - Asks questions about your file")
 st.sidebar.markdown("4 - Have fun 😊")
 
-Open_AI_key = st.sidebar.text_input('Key:', type = 'password')
+Open_AI_key = st.sidebar.text_input('Key:', type = 'password', value=os.environ.get("OPENAI_API_KEY", None)
+            or st.session_state.get("OPENAI_API_KEY", ""))
+
+st.session_state["OPENAI_API_KEY"] = Open_AI_key
 
 pdf = st.file_uploader("Please insert your document here in PDF format: ", type="pdf")
 
