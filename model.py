@@ -6,6 +6,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.document_loaders import PyPDFLoader
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain.vectorstores.docarray.in_memory import DocArrayInMemorySearch
 
 def Retrieval_QA(pdf, query_input, key):
 
@@ -18,8 +19,12 @@ def Retrieval_QA(pdf, query_input, key):
     llm = ChatOpenAI(streaming=True, temperature=0.0, max_tokens=1000, openai_api_key=key, callbacks=[StreamingStdOutCallbackHandler()])
     embeddings = OpenAIEmbeddings(openai_api_key=key)
 
-    db = Chroma.from_documents(
-        texts,
+    # db = Chroma.from_documents(
+    #     texts,
+    #     embeddings
+    # )
+    db = DocArrayInMemorySearch.from_documents(
+        texts, 
         embeddings
     )
 
