@@ -5,5 +5,5 @@ pypdf
 python-dotenv
 openai
 tiktoken
-DocArrayInMemorySearch
+langchain[docarray]
 #pysqlite3-binary
