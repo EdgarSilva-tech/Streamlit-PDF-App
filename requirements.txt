@@ -4,4 +4,5 @@ chromadb
 pypdf
 python-dotenv
 openai
-pysqlite3-binary
+tiktoken
+#pysqlite3-binary
