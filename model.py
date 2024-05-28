@@ -2,8 +2,8 @@ import streamlit as st
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_community.chat_models import ChatOpenAI
-from langchain_community.chains import ConversationalRetrievalChain
-from langchain_community.memory import ConversationBufferMemory
+from langchain.chains import ConversationalRetrievalChain
+from langchain.memory import ConversationBufferMemory
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain_community.vectorstores.docarray.in_memory import DocArrayInMemorySearch
