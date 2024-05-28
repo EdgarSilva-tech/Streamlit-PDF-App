@@ -1,12 +1,12 @@
 import streamlit as st
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores.chroma import Chroma
-from langchain.chat_models import ChatOpenAI
-from langchain.chains import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferMemory
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores.chroma import Chroma
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.chains import ConversationalRetrievalChain
+from langchain_community.memory import ConversationBufferMemory
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-from langchain.vectorstores.docarray.in_memory import DocArrayInMemorySearch
+from langchain_community.vectorstores.docarray.in_memory import DocArrayInMemorySearch
 
 def Retrieval_QA(pdf, query_input, key):
 
